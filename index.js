@@ -7,11 +7,11 @@ var Panier = function() {
     this.totalHT = 0;
     this.ajoute = function(objet) {
         this.totalHT = Math.round((this.totalHT + objet.prix) * 100) / 100;
-        this.totalTTC = Math.round((this.totalHT * 1.20) * 100) / 100;
+        this.totalTTC = Math.round((this.totalHT * 1.055) * 100) / 100;
     };
     this.retire = function(objet) {
         this.totalHT = Math.round((this.totalHT - objet.prix) * 100) / 100;
-        this.totalTTC = Math.round((this.totalHT * 1.20) * 100) / 100;
+        this.totalTTC = Math.round((this.totalHT * 1.055) * 100) / 100;
     };
 };
 
